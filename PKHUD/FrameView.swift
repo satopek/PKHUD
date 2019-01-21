@@ -13,7 +13,7 @@ import UIKit
 internal class FrameView: UIView {
 
     internal init() {
-        super.init(frame: CGRect.zero)
+        super.init(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         commonInit()
     }
 
@@ -24,7 +24,7 @@ internal class FrameView: UIView {
 
     fileprivate func commonInit() {
         backgroundColor = .clear
-        layer.cornerRadius = 0.0
+        layer.cornerRadius = 9.0
         layer.masksToBounds = true
 
         self.addSubview(self.content)
@@ -39,7 +39,7 @@ internal class FrameView: UIView {
         set {
             _content.removeFromSuperview()
             _content = newValue
-            _content.alpha = 0.0
+            _content.alpha = 1
             _content.clipsToBounds = true
             _content.contentMode = .center
             frame.size = _content.bounds.size

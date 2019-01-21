@@ -30,6 +30,7 @@ internal class ContainerView: UIView {
         isHidden = true
 
         addSubview(backgroundView)
+        addSubview(frameView)
     }
 
     internal override func layoutSubviews() {
