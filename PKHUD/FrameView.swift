@@ -24,7 +24,7 @@ internal class FrameView: UIVisualEffectView {
 
     fileprivate func commonInit() {
         backgroundColor = .clear
-        layer.cornerRadius = 9.0
+        layer.cornerRadius = 0.0
         layer.masksToBounds = true
 
         contentView.addSubview(self.content)
@@ -53,7 +53,7 @@ internal class FrameView: UIVisualEffectView {
         set {
             _content.removeFromSuperview()
             _content = newValue
-            _content.alpha = 0.85
+            _content.alpha = 0.0
             _content.clipsToBounds = true
             _content.contentMode = .center
             frame.size = _content.bounds.size
